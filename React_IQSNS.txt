@@ -1,0 +1,273 @@
+1) write code to find the minimum element in array in jaavascript
+s : 
+
+let arr = [7, 200, 400, 500,9, 100, 9000]
+function findMin(arr) {
+    let min = arr[0]; //100
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i] < min){
+            min = arr[i];
+        }
+    }
+    return min;
+}
+
+console.log(findMin(arr));
+
+#############################################################################################################
+
+
+
+2) why React ?
+s: There are several reasons why developers choose to use React:
+
+Performance: React uses a virtual DOM to update the view efficiently, minimizing the number of updates to the actual DOM, 
+which results in faster and smoother updates to the user interface.
+
+Reusability: React components can be easily reused, which makes it easier to build and manage large-scale applications. 
+This allows developers to write less code and increase productivity.
+
+Modularity: React allows developers to build and manage individual components, which can be combined to build complex user interfaces. 
+This makes it easier to maintain and update applications, as well as reuse components in other projects.
+
+Ecosystem: React has a strong and growing ecosystem, with a large community of developers, tools, and libraries. 
+This makes it easier for developers to find solutions to common problems and integrate React into their projects.
+
+Learning curve: React has a relatively low learning curve, especially for developers who are familiar with JavaScript. 
+The library uses a declarative syntax, which makes it easy to understand and write code, even for developers who are new to the library.
+
+Compatibility: React is compatible with other JavaScript libraries and frameworks, which makes it a versatile option for building a wide 
+range of applications.
+
+Overall, React is a popular choice for building web applications due to its performance, reusability, modularity, and strong ecosystem, 
+as well as its relatively low learning curve and compatibility with other technologies.
+
+#############################################################################################################
+
+3) what is virtual DOM ?
+s: The Virtual DOM is a representation of the actual DOM (Document Object Model) that is stored in memory, and 
+it is used to update the actual DOM in an efficient way.
+
+When a change is made to the user interface, React updates the Virtual DOM instead of the actual DOM. 
+The Virtual DOM then compares the new state with the previous state and determines which changes need to be made to 
+the actual DOM. This process is faster than updating the actual DOM directly because it eliminates the need to re-render 
+the entire user interface, and instead only updates the parts that have changed.
+
+The Virtual DOM also makes it easier to update the user interface in real-time, as it reduces the amount of work the 
+browser needs to do to update the actual DOM. This results in a smoother user experience and improved performance.
+
+In summary, the Virtual DOM is a powerful tool that allows React to manage the components of a user interface in an 
+efficient way, resulting in faster and smoother updates to the view, as well as improved performance.
+
+#############################################################################################################
+
+The Virtual DOM is a virtual representation of a web page in the form of a tree structure, similar 
+to the actual DOM (Document Object Model). When a change is made to the web page, React updates the Virtual DOM 
+instead of the actual DOM, to determine what needs to be changed.
+
+Think of the Virtual DOM as a lighter and faster version of the actual DOM, where React can make changes quickly and 
+easily, without affecting the actual DOM. The Virtual DOM then compares the updated version with the previous version, 
+and calculates the most efficient way to update the actual DOM. This process is much faster than updating the actual DOM 
+directly, and it ensures that the web page updates smoothly and efficiently.
+
+To simplify it further, the Virtual DOM is a way for React to manage changes to a web page, by creating a virtual 
+representation of the page, making changes to that virtual representation, and then efficiently updating the actual DOM.
+This makes the updates to the web page faster and smoother, resulting in a better user experience.
+
+#####################################################################################################################
+
+There is only one actual DOM for a web page, but there are two virtual DOMs in the Virtual DOM concept in React. 
+The two virtual DOMs are the previous virtual DOM, which represents the state of the user interface before the change, 
+and the updated virtual DOM, which represents the state of the user interface after the change.
+
+React updates the virtual DOM in memory and then compares the previous virtual DOM with the updated virtual DOM. 
+This comparison process is used to determine the most efficient way to update the actual DOM, as only the necessary 
+changes are made. The previous virtual DOM is then discarded and the updated virtual DOM becomes the new previous 
+virtual DOM for the next change.
+
+In this way, React uses the Virtual DOM to manage changes to the user interface in an efficient and fast way, 
+resulting in improved performance and a smoother user experience.
+
+#####################################################################################################################
+
+When you make a change to a React component, React updates the virtual DOM in memory, rather than updating 
+the actual DOM directly. The virtual DOM is a lightweight in-memory representation of the actual DOM, so updating 
+it is much faster than updating the actual DOM directly.
+
+For example, if you change the text of a button, React updates the virtual DOM to reflect that change. 
+It then compares the previous virtual DOM with the updated virtual DOM, and calculates the most efficient way to update 
+the actual DOM to match the updated virtual DOM. This process is much faster than updating the actual DOM directly, 
+as it avoids the need to re-render the entire user interface.
+
+Once the virtual DOM has been updated, React then updates the actual DOM with the necessary changes, using a process 
+called "reconciliation". The reconciliation process is optimized to minimize the number of updates to the actual DOM, 
+which helps to keep the user interface responsive and fast.
+
+So to summarize, React updates the virtual DOM in memory because it's faster and more efficient than updating 
+the actual DOM directly. The virtual DOM acts as an intermediary between the user interface and the actual DOM, 
+making it possible to update the user interface quickly and smoothly.
+
+
+#############################################################################################################
+
+
+4) what is Reconciliation ?
+s: Reconciliation is the process in React of updating the actual DOM to match the virtual DOM. It's the step that takes 
+the changes made in the virtual DOM and applies them to the actual DOM.
+
+Reconciliation works by comparing the previous virtual DOM with the updated virtual DOM, and determining the most 
+efficient way to update the actual DOM. React only updates the parts of the actual DOM that have changed, rather 
+than re-rendering the entire user interface. This helps to keep the user interface fast and responsive, even when 
+there are many updates.
+
+For example, if you change the text of a button, React updates the virtual DOM to reflect that change. When the 
+virtual DOM has been updated, React performs reconciliation to apply the change to the actual DOM. The reconciliation 
+process compares the previous virtual DOM with the updated virtual DOM, and determines that only the text of the button 
+needs to be updated. React then updates the actual DOM with the new text, leaving the rest of the user interface
+unchanged.
+
+In this way, reconciliation is a crucial step in the Virtual DOM concept in React, as it allows React to update the 
+actual DOM in an efficient and fast way, resulting in a better user experience.
+
+#####################################################################################################
+
+
+5) what are hooks in React ?
+s: In React, hooks are a feature introduced in React 16.8 that allow you to add state and other React features to 
+functional components. Prior to the introduction of hooks, adding state or other React features to functional 
+components required the use of class components, which can be verbose and harder to understand for some developers.
+
+React hooks provide a more concise and intuitive way of adding state and other functionality to functional components, 
+without the need for class components. Some of the most commonly used hooks in React include:
+
+useState: This hook allows you to add state to a functional component. It returns an array with two values: the current 
+state, and a function to update the state.
+
+useEffect: This hook allows you to run side effects (such as data fetching or setting up subscriptions) in response to 
+changes in state or props.
+
+useContext: This hook allows you to access data from the React context API in a functional component.
+
+useReducer: This hook allows you to manage complex state updates and keep your state updates clean and organized.
+
+There are many other hooks in React, each with its own specific use case, but these are some of the most commonly 
+used ones. By using hooks, you can write more efficient, maintainable, and readable code in React.
+
+###########################################################################################################
+
+React hooks are a feature in React that allow functional components to have state and other React features, 
+without the need for class components, enabling more efficient, maintainable, and readable code.
+
+###########################################################################################################
+
+6) what is spread & rest operator, show me a live demo !
+7) Demonstarte me call, apply and bind methods live !
+8) what is this keyword and why do we use arrow function ?
+9) what is Event Bubbling, Event Capturing, live demo !
+
+10) Guess the output 
+    1)  foo ();
+        function foo () {               // function declarations are hoisted
+            console.log("hello");
+        }
+    
+    2)  bar();
+        const bar = () => {             // function expressions are not hoisted
+            console.log("Hey");
+        }
+
+11) are var, let & const hoisted ?
+s: yes, variables declared with var are hoisted with a default initialization of undefined.
+whereas let & const are hoisted without a default initialization, this makes them inaccessible 
+(as such variables will be in a temporal dead zone).
+
+
+12) Guess the Output
+
+    function getMultipleValues(){
+        return 20;
+        return 30;
+    }
+
+    const result = getMultipleValues();
+    console.log(result);
+
+13) what are generators in Javascript ?
+s: In ES6, generators were introduced. genertaors are a different kind of functions in javascript that can pause the 
+execution at one or multiple times & resume the execution whenever needed. to resume the execution we have to call the 
+next method that is available in the generator object.
+
+
+ex : 
+    function* getMultipleValues(){
+        yield 20;
+        yield 30;
+    }
+
+    const result = getMultipleValues();
+    console.log(result.next());
+    console.log(result.next().value);
+
+14) write code for the given input
+    const person = {
+        name : "katty",
+        age : 22
+    };
+
+    output :
+    [
+        ["name", "katty"],
+        ["age", "20"]
+    ];
+s: console.log(Object.entries(person)); // here for "Object" keyword O letter should be in caps otherwise it will throw an error, not defined.
+s: without using inbuilt function 
+
+const person = {
+    name : "Katty",
+    age : 22
+}
+
+const getObjectEntries = (obj) => {
+    const objKeys = Object.keys(obj)
+    // console.log(objKeys);
+        
+    const answer = objKeys.map((key) => {
+        const value = obj[key];
+        return [key, value];
+    });
+        
+    return answer;
+};
+    
+console.log(getObjectEntries(person));
+
+
+15) what is state ?
+s : State in ReactJS is a way to store and manage a component's local and dynamic data, which can change and 
+affect the component's render. It is a private and protected piece of data that can only be updated using 
+React's setState() method, ensuring the component re-renders whenever the state changes.
+
+16) what is prop in React ?
+s: Props in React are a way for components to receive data from their parent component. 
+Props stand for properties and are used to pass data from a parent component to its child component as a way of 
+communication. Props are read-only and should not be modified within a child component, only read. 
+Props can be of any data type, including numbers, strings, objects, arrays, and functions.
+
+17) how do we say that a functional component does not contain state?
+s: A functional component in React is considered stateless because it does not have its own internal state. 
+Unlike class components, functional components do not have access to this.state or this.setState methods. 
+Instead, functional components receive data through props from their parent component and only render the UI based on 
+that data. If a component does not need to manage any dynamic data or user interactions, 
+it can be defined as a functional component. This makes functional components simpler, easier to understand, 
+and faster to render than class components.
+
+
+18) what is the difference between functional & class based components ?
+s: the difference are as follows :
+    1) In class based components we make render function and we return inside it.
+       In function based components we return directly.
+    2) we use "this" keyword in class based components, methods management is easy, we can run methods using this.
+       we don't use this keyword In function based components
+
+19) when to use "this" keyword  ?????????
+s: when you are inside a class ( class based component), you have to use "this" for variables and methods.
